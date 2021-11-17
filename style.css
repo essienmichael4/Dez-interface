@@ -62,28 +62,7 @@ header{
     z-index: 1000;
 }
 
-/* header::before{
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    background-color: blanchedalmond;
-    z-index: 1;
-}
-
-header::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 40%;
-    height: 100%;
-    left:10%;
-    background-color: red;
-    transform: skewX(-30deg);
-} */
-
 header .container{
-    /* z-index: 100; */
     display: flex;
     position: relative;
 }
@@ -102,9 +81,6 @@ header .container .logo{
 }
 
 header .container .logo h1{
-    /* position: absolute;
-    right: 5rem; */
-
     font-size: 1.5rem;
     color: var(--primary-dark);
     text-transform: uppercase;
@@ -123,8 +99,6 @@ header .container .nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: violet; */
-    /* overflow: hidden; */
 }
 
 header .container .nav .socials{
@@ -171,7 +145,6 @@ header .container .nav .socials .social i:hover{
 }
 
 header .container .nav nav{
-    /* background-color: rgb(213, 228, 247); */
     background: linear-gradient(to right,rgb(213, 228, 247),rgb(213, 228, 247),rgb(213, 228, 247), rgb(213, 228, 247), white);
     width: 115%;
     height: 65%;
@@ -207,17 +180,12 @@ header .container .nav nav a{
 main{
     margin-top: 3rem;
     width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    /* height: 100vh; */
 }
 
 .hero{
     width: 100%;
     height: 37rem;
     position: relative;
-    /* background-color: black; */
     overflow: hidden;
 }
 
@@ -235,7 +203,6 @@ section{
     bottom: -20rem;
     left: -5rem;
     border-radius: 50%;
-    /* backdrop-filter: blur(20px); */
     filter: blur(200px);
 }
 
@@ -248,7 +215,6 @@ section{
     top: -2rem;
     right: -2rem;
     border-radius: 50%;
-    /* backdrop-filter: blur(20px); */
     filter: blur(150px);
 }
 
@@ -258,7 +224,6 @@ main .hero .container{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    /* background-color: blue; */
 }
 
 main .hero .container h2{
@@ -271,7 +236,6 @@ main .hero .container h2{
 main .hero .container p{
     width: 60ch;
     text-align: center;
-    /* font-weight: bolder; */
     font-size: 14px;
     margin-top: 1rem;
     color: var(--text-lighter);
@@ -280,7 +244,6 @@ main .hero .container p{
 main .hero .container .cta > *:first-child{
     color: var(--primary-light);
     background-image: linear-gradient(to right, var(--primary-accent), blue, var(--primary-accent));
-    /* background-color: var(--primary-accent); */
     border: none;
 }
 
@@ -347,7 +310,6 @@ main .about .container .circle::after{
 
 main .about .container .content{
     width: 50%;
-    /* height: 95%; */
     word-spacing: .1rem;
 }
 
@@ -355,10 +317,6 @@ main .about .container .content .title{
     color: var(--primary-accent);
     margin-bottom: .5rem;
 }
-
-/* main .about .container .content p + p:last-child{
-    margin-bottom: 1rem;
-} */
 
 main .about .container .content p{
     width: 50ch;
@@ -384,7 +342,6 @@ main .about .container .content ul li i{
 }
 
 main .about .container .content a{
-    /* display: inline-block; */
     margin-top: 1rem 0;
     color: var(--primary-light);
     background-image: linear-gradient(to right, var(--primary-accent), blue, var(--primary-accent));
@@ -435,10 +392,8 @@ main .service .container{
 
 main .service .container .circle{
     position: relative;
-    width: 45%;    
-    /* background-color: var(--primary-dark); */
+    width: 45%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     gap: 1rem;
 }
@@ -455,14 +410,12 @@ main .service .container .circle .right{
     top: -.5rem;
 }
 
-
 main .service .container .circle .left .box,
 main .service .container .circle .left .box1,
 main .service .container .circle .right .box2,
 main .service .container .circle .right .box3{
     width: 100%;
     height: 150px;
-    /* background-color: red; */
     margin: 1rem 0;
     display: flex;
     position: relative;
@@ -480,9 +433,7 @@ main .service .container .circle .right .box3 .overlay4{
     left: -100%;
     height: 100%;
     width: 100%;
-
     display: flex;
-    /* align-items: center; */
     padding-top: 3rem;
     justify-content: center;
     background-color: rgba(1, 124, 240, 0.5);
@@ -502,7 +453,6 @@ main .service .container .circle .left .box:hover .overlay1,
 main .service .container .circle .left .box1:hover .overlay2,
 main .service .container .circle .right .box2:hover .overlay3,
 main .service .container .circle .right .box3:hover .overlay4{
-    /* height: 100%; */
     left: 0;
 }
 
@@ -541,11 +491,8 @@ main .service .container .circle .right .box3 .work p{
     margin-left: 2rem;
 }
 
-
-
 main .service .container .content{
     width: 40%;
-    /* height: 95%; */
     word-spacing: .1rem;
 }
 
@@ -554,16 +501,12 @@ main .service .container .content .title{
     margin-bottom: .5rem;
 }
 
-
-
 main .service .container .content p{
     width: 50ch;
     font-size: 12px;
     margin: .5rem 0;
     color: var(--text-lighter);
 }
-
-
 
 main .service .container .content ul{
     list-style: none;
@@ -582,7 +525,6 @@ main .service .container .content ul li i{
 }
 
 main .service .container .content a{
-    /* display: inline-block; */
     color: var(--primary-light);
     background-image: linear-gradient(to right, var(--primary-accent), blue, var(--primary-accent));
     padding: .5rem 2rem;
