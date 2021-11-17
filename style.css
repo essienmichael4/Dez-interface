@@ -29,11 +29,23 @@ a{
 }
 
 .title{
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 h2, .h2{
     font-size: 2rem;
+}
+h3, .h3{
+    font-size: 1.8rem;
+}
+h4, .h4{
+    font-size: 1.6rem;
+}
+h5, .h5{
+    font-size: 1.4rem;
+}
+h6, .h6{
+    font-size: 1.2rem;
 }
 
 body{
@@ -266,8 +278,9 @@ main .hero .container p{
 }
 
 main .hero .container .cta > *:first-child{
-    color: var(--text-light);
-    background-color: var(--primary-accent);
+    color: var(--primary-light);
+    background-image: linear-gradient(to right, var(--primary-accent), blue, var(--primary-accent));
+    /* background-color: var(--primary-accent); */
     border: none;
 }
 
@@ -293,22 +306,288 @@ main .hero .container i{
 }
 
 main .about{
-    height: 28rem;
+    height: 30rem;
+    background-color: rgb(214, 252, 255);
 }
 
 main .about .container{
     position: relative;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .about .container .circle{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: flex;
     justify-content: center;
-    /* background-color: blue; */
+    align-items: center;
+}
+
+main .about .container .circle::before{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary-dark);
+    border-radius: 50%;
+}
+
+main .about .container .circle::after{
+    position: absolute;
+    content: "";
+    width: 110px;
+    height: 100px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
 }
 
 main .about .container .content{
-    width: 40%;
+    width: 50%;
+    /* height: 95%; */
+    word-spacing: .1rem;
+}
+
+main .about .container .content .title{
+    color: var(--primary-accent);
+    margin-bottom: .5rem;
+}
+
+/* main .about .container .content p + p:last-child{
+    margin-bottom: 1rem;
+} */
+
+main .about .container .content p{
+    width: 50ch;
+    font-size: 12px;
+    margin: .5rem 0;
+    color: var(--text-lighter);
 }
 
 main .about .container .content ul{
     list-style: none;
+    margin: 1rem 0;
+}
+
+main .about .container .content ul li{
+    margin: 0.5rem 0;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+main .about .container .content ul li i{
+    margin-right: .5rem;
+    color: var(--primary-accent);
+}
+
+main .about .container .content a{
+    /* display: inline-block; */
+    margin-top: 1rem 0;
+    color: var(--primary-light);
+    background-image: linear-gradient(to right, var(--primary-accent), blue, var(--primary-accent));
+    padding: .5rem 2rem;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: .1rem;
+}
+main .service{
+    position: relative;
+    height: 30rem;
+    background-color: var(--primary-light);
+    overflow: hidden;
+}
+
+.service::before{
+    content: "";
+    height: 300px;
+    position: absolute;
+    width: 600px;
+    background-color: var(--primary-purple);
+    top: -20rem;
+    left: -5rem;
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    filter: blur(200px);
+}
+
+.service::after{
+    content: "";
+    height: 200px;
+    position: absolute;
+    width: 200px;
+    background-color: var(--text-light);
+    bottom: 0rem;
+    right: 0rem;
+    border-radius: 50%;
+    filter: blur(150px);
+}
+
+main .service .container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .service .container .circle{
+    position: relative;
+    width: 45%;    
+    /* background-color: var(--primary-dark); */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1rem;
+}
+
+main .service .container .circle .left{
+    width: 150px;
+    position: relative;
+    top: .5rem;
+}
+
+main .service .container .circle .right{
+    width: 150px;
+    position: relative;
+    top: -.5rem;
+}
+
+
+main .service .container .circle .left .box,
+main .service .container .circle .left .box1,
+main .service .container .circle .right .box2,
+main .service .container .circle .right .box3{
+    width: 100%;
+    height: 150px;
+    /* background-color: red; */
+    margin: 1rem 0;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: 2px 2px 5px var(--text-light);
+}
+
+main .service .container .circle .left .box .overlay1,
+main .service .container .circle .left .box1 .overlay2,
+main .service .container .circle .right .box2 .overlay3,
+main .service .container .circle .right .box3 .overlay4{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    /* align-items: center; */
+    padding-top: 3rem;
+    justify-content: center;
+    background-color: rgba(1, 124, 240, 0.5);
+    transition: .5s ease;
+}
+
+main .service .container .circle .left .box .overlay1 p,
+main .service .container .circle .left .box1 .overlay2 p,
+main .service .container .circle .right .box2 .overlay3 p,
+main .service .container .circle .right .box3 .overlay4 p{
+    color: var(--text-light);
+    font-size: 9px;
+    text-align: center;
+}
+
+main .service .container .circle .left .box:hover .overlay1,
+main .service .container .circle .left .box1:hover .overlay2,
+main .service .container .circle .right .box2:hover .overlay3,
+main .service .container .circle .right .box3:hover .overlay4{
+    /* height: 100%; */
+    left: 0;
+}
+
+main .service .container .circle .left .box img,
+main .service .container .circle .left .box1 img,
+main .service .container .circle .right .box2 img,
+main .service .container .circle .right .box3 img{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+main .service .container .circle .left .box .work,
+main .service .container .circle .left .box1 .work,
+main .service .container .circle .right .box2 .work,
+main .service .container .circle .right .box3 .work{
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    background-color: var(--primary-accent);
+    bottom: 0;
+    left: -1rem;
+    transform: skewX(30deg);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+main .service .container .circle .left .box .work p,
+main .service .container .circle .left .box1 .work p,
+main .service .container .circle .right .box2 .work p,
+main .service .container .circle .right .box3 .work p{
+    transform: skewX(-30deg);
+    font-size: 10px;
+    font-weight: bolder;
+    margin-left: 2rem;
+}
+
+
+
+main .service .container .content{
+    width: 40%;
+    /* height: 95%; */
+    word-spacing: .1rem;
+}
+
+main .service .container .content .title{
+    color: var(--primary-accent);
+    margin-bottom: .5rem;
+}
+
+
+
+main .service .container .content p{
+    width: 50ch;
+    font-size: 12px;
+    margin: .5rem 0;
+    color: var(--text-lighter);
+}
+
+
+
+main .service .container .content ul{
+    list-style: none;
+    margin: 1rem 0;
+}
+
+main .service .container .content ul li{
+    margin: 0.5rem 0;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+main .service .container .content ul li i{
+    margin-right: .5rem;
+    color: var(--primary-accent);
+}
+
+main .service .container .content a{
+    /* display: inline-block; */
+    color: var(--primary-light);
+    background-image: linear-gradient(to right, var(--primary-accent), blue, var(--primary-accent));
+    padding: .5rem 2rem;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: .1rem;
 }
