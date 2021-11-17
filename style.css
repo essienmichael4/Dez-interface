@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-dark: #000;
+    --primary-light: white;
+    --primary-accent: hsl(224, 87%, 69%);
+    --primary-purple: rgb(205, 154, 253);
+
+    --text-light: rgb(213, 228, 247);
+    --text-lighter: grey;
+    --text-dark: #000;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    /* background-color: black; */
+    height: 100%;
+    z-index: 100;
+    padding: 0 5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    font-size: 1rem;
+}
+
+h2, .h2{
+    font-size: 2rem;
+}
+
+body{
+    font-family: 'Oswald', cursive;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    background-color: var(--primary-light);
+    z-index: 1000;
+}
+
+/* header::before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: blanchedalmond;
+    z-index: 1;
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    left:10%;
+    background-color: red;
+    transform: skewX(-30deg);
+} */
+
+header .container{
+    /* z-index: 100; */
+    display: flex;
+    position: relative;
+}
+
+header .container .logo{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    left: -30%;
+    transform: skewX(-30deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background: linear-gradient(to right,var(--primary-light), var(--primary-accent), var(--primary-accent));
+}
+
+header .container .logo h1{
+    /* position: absolute;
+    right: 5rem; */
+
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    transform: skewX(30deg);
+    margin-left: 50px;
+}
+
+
+header .container .nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    right: -30%;
+    transform: skewX(-30deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: violet; */
+    /* overflow: hidden; */
+}
+
+header .container .nav .socials{
+    background-color: var(--primary-light);
+    width: 110%;
+    height: 35%;
+    transform: skewX(30deg);
+    display: flex;
+    align-items: center;
+    padding-left: 5rem;
+}
+
+header .container .nav .socials .info{
+    display: flex;
+}
+
+header .container .nav .socials .info p{
+    margin: 0 2rem;
+    color: var(--text-dark);
+    font-size: 12px;
+}
+
+header .container .nav .socials .info p i{
+    margin: 0 .5rem;
+    color: var(--primary-accent);
+}
+
+header .container .nav .socials .social{
+    margin-left: 9rem;
+}
+
+header .container .nav .socials .social i{
+    font-size: 12px;
+    padding: .2rem;
+    background-color: var(--primary-light);
+    color: var(--primary-accent);
+    margin: .2rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px var(--primary-accent);
+}
+
+header .container .nav .socials .social i:hover{
+    box-shadow: 0 2px 2px var(--primary-accent);
+}
+
+header .container .nav nav{
+    /* background-color: rgb(213, 228, 247); */
+    background: linear-gradient(to right,rgb(213, 228, 247),rgb(213, 228, 247),rgb(213, 228, 247), rgb(213, 228, 247), white);
+    width: 115%;
+    height: 65%;
+    transform: skewX(30deg);
+    display: flex;
+    align-items: center;
+    padding-left:7.5rem ;
+}
+
+header .container .nav nav ul{
+    list-style: none;
+    display: flex;
+    margin-right: 7rem;
+}
+
+header .container .nav nav ul li{
+    margin: 0 1rem;
+    font-weight: 800;
+    font-size: .8rem;
+}
+
+header .container .nav nav a{
+    margin-left: 1rem;
+    padding: .4rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid var(--text-dark);
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+main{
+    margin-top: 3rem;
+    width: 100%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* height: 100vh; */
+}
+
+.hero{
+    width: 100%;
+    height: 37rem;
+    position: relative;
+    /* background-color: black; */
+    overflow: hidden;
+}
+
+section{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.hero::before{
+    content: "";
+    height: 600px;
+    position: absolute;
+    width: 600px;
+    background-color: var(--primary-purple);
+    bottom: -20rem;
+    left: -5rem;
+    border-radius: 50%;
+    /* backdrop-filter: blur(20px); */
+    filter: blur(200px);
+}
+
+.hero::after{
+    content: "";
+    height: 400px;
+    position: absolute;
+    width: 400px;
+    background-color: var(--text-light);
+    top: -2rem;
+    right: -2rem;
+    border-radius: 50%;
+    /* backdrop-filter: blur(20px); */
+    filter: blur(150px);
+}
+
+main .hero .container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+main .hero .container h2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    word-spacing: .5rem;
+}
+
+main .hero .container p{
+    width: 60ch;
+    text-align: center;
+    /* font-weight: bolder; */
+    font-size: 14px;
+    margin-top: 1rem;
+    color: var(--text-lighter);
+}
+
+main .hero .container .cta > *:first-child{
+    color: var(--text-light);
+    background-color: var(--primary-accent);
+    border: none;
+}
+
+main .hero .container .cta{
+    margin-top: 2rem;
+}
+
+main .hero .container .cta a{
+    color: var(--primary-accent);
+    padding: .5rem 2rem;
+    font-size: 12px;
+    font-weight: bold;
+    border:  1px solid var(--primary-accent);
+    border-radius: 5px;
+    margin: 0 .5rem;
+    letter-spacing: .1rem;
+}
+
+main .hero .container i{
+    position: absolute;
+    bottom: 2rem;
+    color: var(--primary-accent);
+}
+
+main .about{
+    height: 28rem;
+}
+
+main .about .container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+main .about .container .content{
+    width: 40%;
+}
+
+main .about .container .content ul{
+    list-style: none;
+}
